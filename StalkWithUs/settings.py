@@ -26,7 +26,8 @@ SECRET_KEY = 'y0au!b)@z6a+$b%gyi6!doi4d8h!)^ksd8p+(#a0%930$qc_jn'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = '/dashboard'
+LOGOUT_REDIRECT_URL = '/login'
 
 # Application definition
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login'
+    'login',
+    'dashboard'
 ]
 
 MIDDLEWARE = [
