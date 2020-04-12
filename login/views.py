@@ -33,3 +33,22 @@ def register(request):
         form = UserRegistrationForm()
 
     return render(request, 'registration/register.html', {'form': form})
+
+def login(request):
+
+    if request.method == 'POST':
+        user_email = request.POST.get('email')
+        user_password = request.POST.get('password')
+        user1 = userdata.objects.filter(email = user_email, password=user_password)
+        if user1.exists():
+            request.session['email'] = user_email
+            return redirect('home')
+        else:
+            messages.error(request, f'Invalid Email and Password')
+    return render(request, 'registration/login.html')
+
+
+def logout(request):
+	request.session['email'] = None
+	print(logout)
+	return render(request, 'registration/logout.html')
