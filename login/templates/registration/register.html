@@ -1,0 +1,150 @@
+<html>
+<title>
+    Registration Page
+</title>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+{#<form action=" " method = "POST">#}
+{#    {% csrf_token %}#}
+{##}
+{#    <div class="container">#}
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+{#	<p>#}
+{#		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>#}
+{#		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>#}
+{#	</p>#}
+{#	<p class="divider-text">#}
+{#        <span class="bg-light">OR</span>#}
+{#    </p>#}
+	<form action="" method="POST">
+        {% csrf_token %}
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="first_name" class="form-control" placeholder="First name" type="text">
+    </div>
+    <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="last_name" class="form-control" placeholder="Last name" type="text">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address" type="email">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="password" class="form-control" placeholder="Password" type="password">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="confirm_password" class="form-control" placeholder="Confirm Password" type="password">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="institute" class="form-control" placeholder="Institute Name" type="text">
+    </div>
+
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="handle" class="form-control" placeholder="Handle" type="text">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="codechef" class="form-control" placeholder="CodeChef Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="codeforces" class="form-control" placeholder="CodeForces Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="hackerrank" class="form-control" placeholder="Hackerrank Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="Hackerearth" class="form-control" placeholder="HackerEarth Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="spoj" class="form-control" placeholder="Spoj Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="linkedin" class="form-control" placeholder="LinkedIn Link" type="url">
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="github" class="form-control" placeholder="GitHub Link" type="url">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> <!-- form-group// -->
+    <p class="text-center">Have an account? <a href="#">Log In</a> </p>
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div>
+
+
+
+
+
+{#    <input type="text" placeholder="First Name" name = "first_name"><br>#}
+{#    <input type="text" placeholder="Last Name" name = "last_name"><br>#}
+{#    <input type="email" placeholder="Email" required name = "email"><br>#}
+{#    <input type="password" placeholder="Password" required name="password"><br>#}
+{#    <input type="password" placeholder="Confirm-Password" required name = "confirm_password"><br>#}
+{#    <input type="text" placeholder="Institute" name=""institute><br>#}
+{#    <input type="text" placeholder="Handle" name="handle" required><br>#}
+{#    <input type="url" placeholder="CodeChef" name="codechef"><br>#}
+{#    <input type="url" placeholder="Codeforces" name="codeforces"><br>#}
+{#    <input type="url" placeholder="Hackerrank" name="Hackerrank"><br>#}
+{#    <input type="url" placeholder="Hackerearth" name="Hackerearth"><br>#}
+{#    <input type="url" placeholder="Spoj" name="Spoj"><br>#}
+{#    <input type="url" placeholder="LinkedIn" name="linkedin"><br>#}
+{#    <input type="url" placeholder="GitHub" name="github"><br>#}
+{#    <button>#}
+{#        Register#}
+{#    </button>#}
+{#</form>#}
+
+</body>
+</html>

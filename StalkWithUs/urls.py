@@ -16,13 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url ,include
-from django.contrib.auth import views as auth_views
-from dashboard import views as dash_view
+
 urlpatterns = [
     url('admin/', admin.site.urls),
-    #url('login/', include('login.urls'))
-    url(r'login/', auth_views.LoginView.as_view(), name='login'),
-    path('dashboard/', include('dashboard.urls')),
-    url(r'^logout/$',  auth_views.LogoutView.as_view(), name='logout'),
-
+    url('', include('login.urls'))
 ]
