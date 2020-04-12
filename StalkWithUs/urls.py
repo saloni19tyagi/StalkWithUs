@@ -19,5 +19,6 @@ from django.conf.urls import url ,include
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('', include('login.urls'))
+    url('', include('login.urls')),
+    url('dashboard/',include('dashboard.urls'))
 ]
