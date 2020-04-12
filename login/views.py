@@ -39,12 +39,15 @@ def login(request):
     if request.method == 'POST':
         user_email = request.POST.get('email')
         user_password = request.POST.get('password')
+        print(user_email)
+        print(user_password)
         user1 = userdata.objects.filter(email = user_email, password=user_password)
         if user1.exists():
             request.session['email'] = user_email
             return redirect('home')
         else:
             messages.error(request, f'Invalid Email and Password')
+
     return render(request, 'registration/login.html')
 
 

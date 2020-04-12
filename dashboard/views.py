@@ -10,7 +10,7 @@ from django.contrib.auth import logout
 # Create your views here.
 
 def home(request):
-    if not request.user.is_authenticated:
-        return redirect('/login/?next=%s' % request.path)
-    if request.user.is_authenticated:
-        return render(request, "index.html", {})
+    # if not request.user.is_authenticated:
+    #     return redirect('/login/?next=%s' % request.path)
+    # if request.user.is_authenticated:
+    return render(request, "index.html", {})
