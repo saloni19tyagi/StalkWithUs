@@ -44,3 +44,23 @@ html,body,.row{
 .navbar-brands{
     color: white;
 }
+
+.btn.btn-circle {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+    background-color: #FFEB3B;
+    border-color:#FFEB3B ;
+}
+
+.row{
+    padding : 2%;
+}
+
+img{
+    height: 100px;
+}
