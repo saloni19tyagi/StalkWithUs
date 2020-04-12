@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="card bg-light">
+<div class="card bg-light" style="width:60%;margin-left: 25%;margin-top: 7%;">
 <article class="card-body mx-auto" style="max-width: 400px;">
 	<h4 class="card-title mt-3 text-center">Create Account</h4>
 
@@ -96,15 +96,9 @@
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+         <p class="text-center">have an account? <a href="/login">Login here</a> </p>
     </div> <!-- form-group// -->
-    <p class="text-center">Have an account? <a href={% url 'login' %}>Log In</a> </p>
 </form>
 </article>
-</div> <!-- card.// -->
-
 </div>
-
 {% endblock content %}
-
-</body>
-</html>
