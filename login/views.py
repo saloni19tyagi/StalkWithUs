@@ -3,6 +3,7 @@ from .forms import UserRegistrationForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from .models import userdata
+from django.contrib.auth import authenticate
 
 def register(request):
     if request.method == 'POST':
@@ -31,7 +32,8 @@ def register(request):
             messages.error(request, f'Error')
     else:
         form = UserRegistrationForm()
-
+    if 'email' in request.session :
+        return redirect('home')
     return render(request, 'registration/register.html', {'form': form})
 
 def login(request):
@@ -39,19 +41,25 @@ def login(request):
     if request.method == 'POST':
         user_email = request.POST.get('email')
         user_password = request.POST.get('password')
-        print(user_email)
-        print(user_password)
+        # print(user_email)
+        # print(user_password)
         user1 = userdata.objects.filter(email = user_email, password=user_password)
+        # user = authenticate(email = user_email, password=user_password)
+        # print(user1.values())
+        for obj in user1.values():
+            for key , value in obj.items():
+                request.session[key] = value
+        print(request.session['institute'])
         if user1.exists():
             request.session['email'] = user_email
             return redirect('home')
         else:
             messages.error(request, f'Invalid Email and Password')
-
+    if 'email' in request.session :
+        return redirect('home')
     return render(request, 'registration/login.html')
 
 
 def logout(request):
-	request.session['email'] = None
-	print(logout)
-	return render(request, 'registration/logout.html')
+    del request.session['email']
+    return render(request, 'registration/logout.html')

@@ -10,13 +10,13 @@ class userdata(models.Model):
     password = models.CharField(max_length=50,default="")
     institute = models.TextField(default="", blank=True)
     handle = models.TextField(max_length=20, unique=True, default="")
-    codechef = models.URLField(blank=True, default="")
-    codeforces = models.URLField(blank=True, default="")
-    hackerrank = models.URLField(blank=True, default="")
-    hackerearth = models.URLField(blank=True, default="")
-    spoj = models.URLField(blank=True,default="")
-    linkedin = models.URLField(blank=True, default="")
-    github = models.URLField(blank=True, default="")
+    codechef = models.TextField(blank=True, default="")
+    codeforces = models.TextField(blank=True, default="")
+    hackerrank = models.TextField(blank=True, default="")
+    hackerearth = models.TextField(blank=True, default="")
+    spoj = models.TextField(blank=True,default="")
+    linkedin = models.TextField(blank=True, default="")
+    github = models.TextField(blank=True, default="")
 
     def __str__(self):
         return self.email
