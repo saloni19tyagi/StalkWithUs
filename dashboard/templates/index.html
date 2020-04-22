@@ -1,64 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="center">
-    <div class="row">
-    <table class="centered">
-        <tbody>
-        <tr>
-            <th>
-                <strong><b>Vandita Singh</b></strong>
-            </th>
-            <th>
-                <button class="btn btn-success btn-circle m-1"><i class="fa fa-university"></i></button>
 
-            </th>
-        </tr>
-        </tbody>
-    </table>
-   </div>
-    <div class="row center">
-        <table class="centered">
-            <tbody>
-            <tr>
-                <th>
-                   <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codechef.com/users/vandita_1081">
-                    <div class="chip" id="codechef_chip">
-                        <img src="../../static/image/codechef_logo.png" alt="CodeChef">
+<div class="row" >
+  <table class="centered">
+      <tbody>
+      <tr>
+          <th>
+              <strong><b>{{ request.session.first_name }} {{ request.session.last_name }}</b></strong>
+          </th>
+          <th>
+              <button class="btn btn-success btn-circle m-1" title="{{request.session.institute}}" data-toggle="popover" data-trigger="hover"><i class="fa fa-university"></i></button>
+          </th>
+          <th>
+             <a  target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codechef.com/users/{{ request.session.codechef }}">
+              <div class="chip" id="codechef_chip">
+                  <img src="../../static/image/codechef_logo.png" alt="CodeChef">
 
-                    </div>
-                    </a>
-                </th>
-                <th>
-                   <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codeforces.com/profile/vandita_1081">
-                   <div class="chip" id="codeforces_chip">
-                      <img src="../../static/image/codeforces_logo.png" alt="CodeForces">
+              </div>
+              </a>
+          </th>
+          <th>
+             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codeforces.com/profile/{{ request.session.codeforces }}">
+             <div class="chip" id="codeforces_chip">
+                <img src="../../static/image/codeforces_logo.png" alt="CodeForces">
 
-                    </div>
-                    </a>
-                </th>
-                <th>
-                   <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.hackerrank.com/vandita_singh30">
-                   <div class="chip" >
-                      <img src="../../static/image/hackerrank_logo.png" >
+              </div>
+              </a>
+          </th>
+          <th>
+             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.hackerrank.com/{{ request.session.hackerrank }}">
+             <div class="chip" >
+                <img src="../../static/image/hackerrank_logo.png" >
 
-                    </div>
-                    </a>
-                </th>
-                <th>
-                   <a target="_blank"  class="tooltipped profile-page-site-profile-url"  href="https://www.hackerearth.com/@vandita14">
-                   <div class="chip" >
-                      <img src="../../static/image/hackerearth.png" alt="CodeForces">
+              </div>
+              </a>
+          </th>
+          <th>
+             <a target="_blank"  class="tooltipped profile-page-site-profile-url"  href="https://www.hackerearth.com/{{ request.session.hackerearth }}">
+             <div class="chip" >
+                <img src="../../static/image/hackerearth.png" alt="CodeForces">
 
-                    </div>
-                    </a>
-                </th>
-            </tr>
-            </tbody>
-        </table>
-
-
-    </div>
+              </div>
+              </a>
+          </th>
+      </tr>
+      </tbody>
+  </table>
 </div>
+<div class="card" >
+    <div class="card-header" style="padding-left: 35%; padding-bottom: 0;">
+      <h3>Solved Count</h3>
+    </div>
+    <div class="card-body" style="padding :0;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Code Forces</th>
+            <th scope="col">Codechef</th>
+            <th scope="col">Hacker Rank</th>
+            <th scope="col">Hacker Earth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>23</td>
+            <td>121</td>
+            <td>123</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+    </div>
+  </div>
+  
+<!-- </div>
+ --><!-- </div> -->
 
 {% endblock %}
