@@ -1,29 +1,18 @@
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load fontawesome %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>StalkWithUs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
     <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css">
-{#    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">#}
-<script>
-    var closeNav = false;
-function openNav() {
-  closeNav = !closeNav;
-  console.log(closeNav);
-  if(closeNav){
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main").style.marginLeft = "200px";
-  document.getElementById("mySidenav").style.marginTop = "62px";
-}else{
-    document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "100px";
-}
-}
-</script>
+    <script src="/static/js/main.js"></script>
+    {% fontawesome_stylesheet %}
 
 </head>
 <body >
