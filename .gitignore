@@ -7,7 +7,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+venv/
 env/
+venv/
+env_file/
 build/
 develop-eggs/
 dist/
@@ -30,6 +33,7 @@ var/
 __pycache__/
 local_settings.py
 
-.env
+
 db.sqlite3
 .idea/
+.DS_Store/

@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'dashboard',
-    'bootstrap4',
-    'fontawesome',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
