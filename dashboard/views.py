@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib.auth import logout
 # Create your views here.
+import requests
 
 def home(request):
 	if 'email' in request.session:
@@ -26,3 +27,10 @@ def home(request):
 
 		return render(request, "index.html", {'rating' : data['rating']})
 	return redirect('/login/?next=%s' % request.path)
+
+def viewProfile(request):
+    url = "https://codeforces.com/api/user.info?handles=vandita_1081"
+    response = requests.request("GET", url)
+    print(response.text.encode('utf8'))
+    response = response.json()
+    return render(request, 'profile.html', {'submissionData': response})
