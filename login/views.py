@@ -49,7 +49,7 @@ def login(request):
         for obj in user1.values():
             for key , value in obj.items():
                 request.session[key] = value
-        print(request.session['institute'])
+        # print(request.session['institute'])
         if user1.exists():
             request.session['email'] = user_email
             return redirect('home')
