@@ -19,5 +19,5 @@ from django.conf.urls import url
 from dashboard import views
 urlpatterns = [
     path('', views.home, name='home'),
-    path('profile/', views.viewProfile, name='profile')
+    # path('profile/', views.viewProfile, name='profile')
 ]
