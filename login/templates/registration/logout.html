@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="card" style="width: 50%; margin-top: 10%; margin-left: 30%;">
+	<div class="card-body">
 		<h2>You have been logout</h2>
-		<div class = "border-top pt-3">
-			<small class = "text-muted">
-				<a href="{% url 'login'%}">Log In Again</a>
-			</small>
+	</div>
+	<div class="card-footer">
+		<div class="float-right">
+			<a href="{% url 'login'%}">Log In Again</a>
 		</div>
+	</div>
+</div>
+		
 {% endblock content %}

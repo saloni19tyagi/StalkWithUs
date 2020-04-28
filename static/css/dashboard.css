@@ -18,11 +18,14 @@
 img{
     height: 60px;
 }
+
 body{
   background-color :#C0C0C0;
 }
 
-
+.nav.navbar-nav{
+  flex-direction: row;
+}
 
 .sidenav {
   height: 100%;
@@ -31,7 +34,7 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #343a40!important;;
   overflow-x: hidden;
   transition: 0.5s;
   //padding-top: 60px;
@@ -48,7 +51,4 @@ body{
 
 .sidenav a:hover {
   color: #f1f1f1;
-}
-.navbar-nav{
-  flex-direction: row;
 }

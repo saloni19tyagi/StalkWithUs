@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
 <div class="row" >
   <table class="centered">
       <tbody>
@@ -10,7 +9,7 @@
               <strong><b>{{ request.session.first_name }} {{ request.session.last_name }}</b></strong>
           </th>
           <th>
-              <button class="btn btn-success btn-circle m-1" title="{{request.session.institute}}" data-toggle="popover" data-trigger="hover"><i class="fa fa-university"></i></button>
+              <button class="btn btn-success btn-circle m-1" title="{{request.session.institute}}" data-toggle="popover" data-trigger="hover"><i class="fas fa-university"></i></button>
           </th>
           <th>
              <a  target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codechef.com/users/{{ request.session.codechef }}">
