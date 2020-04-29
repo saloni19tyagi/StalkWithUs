@@ -1,4 +1,6 @@
-
+.body{
+  background-color :#C0C0C0;
+}
 .btn.btn-circle {
   width: 55px;
   height: 55px;
@@ -19,15 +21,8 @@ img{
     height: 60px;
 }
 
-body{
-  background-color :#C0C0C0;
-}
 
 .nav.navbar-nav{
-  flex-direction: row;
-}
-
-.navbar-nav{
   flex-direction: row;
 }
 
