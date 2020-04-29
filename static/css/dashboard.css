@@ -26,9 +26,6 @@ img{
   flex-direction: row;
 }
 
-.navbar-nav{
-  flex-direction: row;
-}
 .sidenav {
   height: 100%;
   width: 0;
