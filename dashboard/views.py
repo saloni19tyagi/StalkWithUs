@@ -11,6 +11,7 @@ import requests
 def home(request):
 	if 'email' in request.session:
 
+		userhandle = request.session['codeforces']
 		url = "https://codeforces.com/api/user.info?handles=vandita_1081"
 		payload = {}
 		headers = {
