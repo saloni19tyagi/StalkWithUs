@@ -14,7 +14,9 @@ codechef = [[11, 12, 5, 27, 15, 32,14], [41, 92, 18, 3, 73, 87, 92], [41, 92, 18
 hackerrank = [[87, 21, 94, 3, 90, 13, 65], [87, 21, 94, 3, 90, 13, 65], [87, 21, 94, 3, 90, 13, 65], [87, 21, 94, 3, 90, 13, 65]]
 def home(request):
 	if 'email' in request.session:
+
 		codechef_url = 'https://competitive-coding-api.herokuapp.com/api/codechef/%s' % request.session['codechef']
+<<<<<<< HEAD
 		response = requests.get(codechef_url);
 		codechef = response.json();
 		url = "https://codeforces.com/api/user.info?handles="+request.session['codeforces']
@@ -23,15 +25,17 @@ def home(request):
 			'Cookie': 'JSESSIONID=02249090B1061D683A8B443894284151-n1; 39ce7=CFkwUcjt'
 		}
 		response = requests.request("GET", url, headers=headers, data = payload)
+=======
+		response = requests.get(codechef_url)
+		codechef = response.json()
+>>>>>>> a7fe6694fcef9d4fc05b88d8bd90bfde15b5de32
 
-		# print(response.json())
-		response = response.json()
-		# print(response['result'])
-		li = response['result']
-		data = li[0]
-		# print(data['rating'])
+		codeforcesurl = "https://codeforces.com/api/user.info?handles="+request.session['codeforces']
+		codeforces = requests.request("GET", codeforcesurl).json()
+		li = codeforces['result']
+		codeforcesrating = li[0]
 
-		return render(request, "index.html", {'codechefRank' : codechef['rank'],'codeforcesRating' : data['rating']})
+		return render(request, "index.html", {'codechefRank': codechef['rank'], 'codeforcesRating': codeforcesrating['rating']})
 	return redirect('/login/?next=%s' % request.path)
 
 class LineChartJSONView(BaseLineChartView):
