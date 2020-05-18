@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
 from dashboard import views
+from .views import line_chart, line_chart_json
 urlpatterns = [
     path('', views.home, name='home'),
     # path('profile/', views.viewProfile, name='profile')
+    path('chart', line_chart, name='line_chart'),
+	path('chartJSON', line_chart_json, name='line_chart_json'),
 ]
