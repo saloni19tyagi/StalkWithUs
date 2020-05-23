@@ -19,8 +19,10 @@ from django.conf.urls import url
 from dashboard import views
 from .views import line_chart, line_chart_json
 urlpatterns = [
-    path('', views.home, name='home'),
-    # path('profile/', views.viewProfile, name='profile')
-    path('chart', line_chart, name='line_chart'),
-	path('chartJSON', line_chart_json, name='line_chart_json'),
+    path('dashboard/', views.home, name='home'),
+    path('profile/', views.viewProfile, name='profile'),
+    path('friends/',views.friends, name='friends'),
+    path('todolist/', views.todolist, name='todolist'),
+    path('chart/', line_chart, name='line_chart'),
+	path('chartJSON/', line_chart_json, name='line_chart_json'),
 ]
