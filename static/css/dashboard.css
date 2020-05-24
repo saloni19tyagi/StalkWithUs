@@ -2,15 +2,27 @@
   background-color :#C0C0C0;
 }
 .btn.btn-circle {
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
   font-size: 1.1rem;
   text-align: center;
   padding: 0;
   border-radius: 50%;
-    background-color: #FFEB3B;
-    border-color:#FFEB3B ;
+
+}
+/*.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
+*/
+.btn-circle i {
+  position: relative;
+  top: -1px;
 }
 
 .row{
@@ -36,7 +48,10 @@ img{
   background-color: #343a40!important;;
   overflow-x: hidden;
   transition: 0.5s;
-  //padding-top: 60px;
+  margin-top:0; 
+}
+.sideNavInner{
+
 }
 
 .sidenav a {
@@ -50,4 +65,8 @@ img{
 
 .sidenav a:hover {
   color: #f1f1f1;
+}
+
+.btn{
+  background-color: #17a2b8;
 }
