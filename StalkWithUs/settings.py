@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'dashboard',
-    'rest_framework',
-    'chartjs',
+    'chartjs'
 ]
 
 MIDDLEWARE = [
