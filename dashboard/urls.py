@@ -23,6 +23,9 @@ urlpatterns = [
     path('profile/', views.viewProfile, name='profile'),
     path('friends/',views.friends, name='friends'),
     path('todolist/', views.todolist, name='todolist'),
+    path('leaderboard/', views.leaderboard, name='leaderboard'),
+    path('recentsubmissions/', views.recentsubmissions, name='recentsubmissions'),
+    path('aboutus/', views.aboutus, name='aboutus'),
     path('chart/', line_chart, name='line_chart'),
 	path('chartJSON/', line_chart_json, name='line_chart_json'),
 ]
