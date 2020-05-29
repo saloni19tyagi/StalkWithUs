@@ -17,6 +17,8 @@ class userdata(models.Model):
     spoj = models.TextField(blank=True,default="")
     linkedin = models.TextField(blank=True, default="")
     github = models.TextField(blank=True, default="")
+    codeforcesRating = models.TextField(default=0, blank=True)
+    codechefRating = models.TextField(default=0, blank=True)
 
     def __str__(self):
         return self.email
