@@ -1,4 +1,7 @@
+import requests
 from django.shortcuts import redirect,render
+
+from dashboard import models
 from .forms import UserRegistrationForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages

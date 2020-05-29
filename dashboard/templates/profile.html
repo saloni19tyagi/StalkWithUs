@@ -8,13 +8,13 @@
       <tbody>
       <tr>
           <th>
-              <strong><b>{{ request.session.first_name }} {{ request.session.last_name }}</b></strong>
+              <strong><b>{{ user.first_name }} {{ user.last_name }}</b></strong>
           </th>
           <th>
-              <button class="btn btn-success btn-circle m-1" title="{{request.session.institute}}" data-toggle="popover" data-trigger="hover"><i class="fas fa-university"></i></button>
+              <button class="btn btn-success btn-circle m-1" title="{{user.institute}}" data-toggle="popover" data-trigger="hover"><i class="fas fa-university"></i></button>
           </th>
           <th>
-             <a  target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codechef.com/users/{{ request.session.codechef }}">
+             <a  target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codechef.com/users/{{ user.codechef }}">
               <div class="chip" id="codechef_chip">
                   <img src="../../static/image/codechef_logo.png" alt="CodeChef">
 
@@ -22,7 +22,7 @@
               </a>
           </th>
           <th>
-             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codeforces.com/profile/{{ request.session.codeforces }}">
+             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.codeforces.com/profile/{{ user.codeforces }}">
              <div class="chip" id="codeforces_chip">
                 <img src="../../static/image/codeforces_logo.png" alt="CodeForces">
 
@@ -30,7 +30,7 @@
               </a>
           </th>
           <th>
-             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.hackerrank.com/{{ request.session.hackerrank }}">
+             <a target="_blank" class="tooltipped profile-page-site-profile-url"  href="https://www.hackerrank.com/{{ user.hackerrank }}">
              <div class="chip" >
                 <img src="../../static/image/hackerrank_logo.png" >
 
@@ -38,13 +38,16 @@
               </a>
           </th>
           <th>
-             <a target="_blank"  class="tooltipped profile-page-site-profile-url"  href="https://www.hackerearth.com/{{ request.session.hackerearth }}">
+             <a target="_blank"  class="tooltipped profile-page-site-profile-url"  href="https://www.hackerearth.com/{{ user.hackerearth }}">
              <div class="chip" >
                 <img src="../../static/image/hackerearth.png" alt="CodeForces">
 
               </div>
               </a>
           </th>
+{#          <th>#}
+{#              <a class = "btn btn-primary" href= "{% url 'refreshData' %}"></a>#}
+{#          </th>#}
       </tr>
       </tbody>
   </table>
@@ -65,8 +68,8 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{ codeforcesRating }}</td>
-            <td>{{codechefRank}}</td>
+            <td>{{ user.codeforcesRating }}</td>
+            <td>{{ user.codechefRating }}</td>
             <td>123</td>
             <td>34</td>
           </tr>
