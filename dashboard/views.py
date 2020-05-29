@@ -70,6 +70,15 @@ def todolist(request):
     return render(request, "toDoList.html");
 
 
+def leaderboard(request):
+	return render(request,"leaderboard.html");
+
+def aboutus(request):
+	return render(request,"aboutus.html");
+
+def recentsubmissions(request):
+	return render(request,"recent_friends_submissions.html");
+
 class LineChartJSONView(BaseLineChartView):
     def get_labels(self):
         """Return 7 labels for the x-axis."""

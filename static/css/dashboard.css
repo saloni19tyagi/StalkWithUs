@@ -33,7 +33,9 @@ img{
     height: 60px;
 }
 
-
+.card-header{
+  text-align: center;
+}
 .nav.navbar-nav{
   flex-direction: row;
 }
