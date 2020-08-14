@@ -29,7 +29,8 @@ urlpatterns = [
     path('leaderboard/', views.leaderboard, name='leaderboard'),
     path('recentsubmissions/', views.recentsubmissions, name='recentsubmissions'),
     path('aboutus/', views.aboutus, name='aboutus'),
-    path('chart/', line_chart, name='line_chart'),
-    path('chartJSON/', line_chart_json, name='line_chart_json'),
-    path('refreshData', views.refreshData, name='refreshData')
+    path('trendingProblems/', views.trendingProblems, name='trendingProblems'),
+    # path('chart/', line_chart, name='line_chart'),
+    # path('chartJSON/', line_chart_json, name='line_chart_json'),
+    # path('refreshData', views.refreshData, name='refreshData')
 ]
