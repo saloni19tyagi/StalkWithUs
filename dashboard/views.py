@@ -8,7 +8,9 @@ from django.contrib.auth import logout
 # Create your views here.
 import requests
 from django.views.generic import TemplateView
-from chartjs.views.lines import BaseLineChartView
+from dashboard.leaderboard import createLeaderBoard
+
+# from chartjs.views.lines import BaseLineChartView
 
 from dashboard import models
 from login import models
@@ -44,6 +46,7 @@ def todolist(request):
 
 
 def leaderboard(request):
+    createLeaderBoard()
     return render(request, "leaderboard.html")
 
 
@@ -74,20 +77,20 @@ def refreshData(request):
     return render(request, "profile.html")
 
 
-class LineChartJSONView(BaseLineChartView):
-    def get_labels(self):
-        """Return 7 labels for the x-axis."""
-        return ["January", "February", "March", "April", "May", "June", "July"]
+# class LineChartJSONView(BaseLineChartView):
+#     def get_labels(self):
+#         """Return 7 labels for the x-axis."""
+#         return ["January", "February", "March", "April", "May", "June", "July"]
 
-    def get_providers(self):
-        """Return names of datasets."""
-        return ["codeforces", "codechef", "hackerrank"]
+#     def get_providers(self):
+#         """Return names of datasets."""
+#         return ["codeforces", "codechef", "hackerrank"]
 
-    def get_data(self):
-        """Return 3 datasets to plot."""
+#     def get_data(self):
+#         """Return 3 datasets to plot."""
 
-        return [codeforces[0], codechef[0], hackerrank[0]]
+#         return [codeforces[0], codechef[0], hackerrank[0]]
 
 
-line_chart = TemplateView.as_view(template_name='line_chart.html')
-line_chart_json = LineChartJSONView.as_view()
+# line_chart = TemplateView.as_view(template_name='line_chart.html')
+# line_chart_json = LineChartJSONView.as_view()

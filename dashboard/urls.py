@@ -19,7 +19,7 @@ from django.conf.urls import url
 
 import dashboard
 from dashboard import views
-from .views import line_chart, line_chart_json
+# from .views import line_chart, line_chart_json
 
 urlpatterns = [
     path('dashboard/', views.home, name='home'),
@@ -29,7 +29,7 @@ urlpatterns = [
     path('leaderboard/', views.leaderboard, name='leaderboard'),
     path('recentsubmissions/', views.recentsubmissions, name='recentsubmissions'),
     path('aboutus/', views.aboutus, name='aboutus'),
-    path('chart/', line_chart, name='line_chart'),
-    path('chartJSON/', line_chart_json, name='line_chart_json'),
+    # path('chart/', line_chart, name='line_chart'),
+    # path('chartJSON/', line_chart_json, name='line_chart_json'),
     path('refreshData', views.refreshData, name='refreshData')
 ]
