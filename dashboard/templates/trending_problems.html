@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row col s12">
+    <div class="col offset-s1 s4 z-depth-2 trendings-html-table" id="friends-trending-table" >
+    <div class="card">
+            <div>
+                <h5 class="card-header">Trending among friends</h5>
+                <hr>
+                <table  class="table  table-hover ">
+                    <thead >
+                        <tr>
+                            <th>Problem</th>
+                            <th>Recent Submissions</th>
+                            <th>Friends</th>
+                        </tr>
+                    </thead>
+                    <tbody class="card-body">
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;">
+                                    <a class="problem-listing solved-problem" href="https://codeforces.com/problemset/problem/1391/B"
+                                        target="_blank" title="Solved problem">Fix You</a>
+                                   
+                                </div>
+                            </td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;">
+                                    <a class="problem-listing solved-problem" href="https://codeforces.com/problemset/problem/1391/A"
+                                        target="_blank" title="Solved problem">Suborrays</a>
+                                    </div>
+                            </td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://codeforces.com/problemset/problem/1393/A" target="_blank"
+                                        title="Unattempted problem">Rainbow Dash, Fluttershy and Chess Coloring</a>
+                                        </div>
+                            </td>
+                            <td>3</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unsolved-problem"
+                                        href="https://codeforces.com/problemset/problem/1395/A" target="_blank" title="Unsolved problem">Boboniu
+                                        Likes to Color Balls</a></div>
+                            </td>
+                            <td>3</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://codeforces.com/problemset/problem/1393/B" target="_blank"
+                                        title="Unattempted problem">Applejack and Storages</a></div>
+                            </td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unsolved-problem"
+                                        href="https://codeforces.com/problemset/problem/1391/C" target="_blank" title="Unsolved problem">Cyclic
+                                        Permutations </a></div>
+                            </td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing solved-problem"
+                                        href="http://www.codeforces.com/problemset/problem/1395/B" target="_blank" title="Solved problem">Boboniu
+                                        Plays Chess</a></div>
+                            </td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+   <!-- <div class="card">
+       
+   </div> -->
+    <div class="col offset-s2 s4 z-depth-2" id="global-trending-table" >
+        <div class="card">
+            <div>
+                <h5 class="card-header">Trending Globally</h5>
+                <hr>
+                <table  class="table  table-hover ">
+                    <thead >
+                        <tr>
+                            <th>Problem</th>
+                            <th>Recent Submissions</th>
+                            <th>Users</th>
+                        </tr>
+                    </thead>
+                    <tbody class="card-body">
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://codeforces.com/problemset/problem/1399/A" target="_blank" title="Unattempted problem">Remove
+                                        Smallest</a>
+                                </div>
+                            </td>
+                            <td>5375</td>
+                            <td>3735</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://codeforces.com/problemset/problem/1399/B" target="_blank" title="Unattempted problem">Gifts
+                                        Fixing</a></div>
+                            </td>
+                            <td>4037</td>
+                            <td>3468</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://codeforces.com/problemset/problem/1399/C" target="_blank" title="Unattempted problem">Boats
+                                        Competition</a></div>
+                            </td>
+                            <td>5849</td>
+                            <td>2927</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing solved-problem"
+                                        href="https://codeforces.com/problemset/problem/1391/A" target="_blank"
+                                        title="Solved problem">Suborrays</a></div>
+                            </td>
+                            <td>3055</td>
+                            <td>2756</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing solved-problem"
+                                        href="/problems?problem_id=78847" target="_blank" title="Solved problem">Fix
+                                        You</a></div>
+                            </td>
+                            <td>2989</td>
+                            <td>2609</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=78717" target="_blank"
+                                        title="Unattempted problem">Rainbow Dash, Fluttershy and Chess Coloring</a></div>
+                            </td>
+                            <td>4386</td>
+                            <td>2583</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=79113" target="_blank"
+                                        title="Unattempted problem">CHEFWARS</a></div>
+                            </td>
+                            <td>3870</td>
+                            <td>2291</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=78641" target="_blank" title="Unattempted problem">Binary
+                                        String To Subsequences</a></div>
+                            </td>
+                            <td>5663</td>
+                            <td>2246</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unsolved-problem"
+                                        href="/problems?problem_id=79071" target="_blank" title="Unsolved problem">Boboniu
+                                        Likes to Color Balls</a></div>
+                            </td>
+                            <td>5897</td>
+                            <td>2240</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=79114" target="_blank"
+                                        title="Unattempted problem">LINCHESS</a></div>
+                            </td>
+                            <td>3441</td>
+                            <td>2106</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=79144" target="_blank"
+                                        title="Unattempted problem">CRDGAME3</a></div>
+                            </td>
+                            <td>3332</td>
+                            <td>2061</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="/problems?problem_id=78718" target="_blank"
+                                        title="Unattempted problem">Applejack and Storages</a></div>
+                            </td>
+                            <td>5877</td>
+                            <td>2036</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unattempted-problem"
+                                        href="https://www.codechef.com/AUG20B/problems/SKMP" target="_blank"
+                                        title="Unattempted problem">SKMP</a></div>
+                            </td>
+                            <td>10417</td>
+                            <td>2005</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing solved-problem"
+                                        href="https://codeforces.com/problemset/problem/1395/B" target="_blank" title="Solved problem">Boboniu
+                                        Plays Chess</a></div>
+                            </td>
+                            <td>3246</td>
+                            <td>1801</td>
+                        </tr>
+                        <tr>
+                            <td class="left-align-problem">
+                                <div style="display: inline;"><a class="problem-listing unsolved-problem"
+                                        href="https://codeforces.com/problemset/problem/1391/C" target="_blank" title="Unsolved problem">Cyclic
+                                        Permutations </a></div>
+                            </td>
+                            <td>2542</td>
+                            <td>1638</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
