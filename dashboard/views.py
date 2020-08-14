@@ -51,10 +51,6 @@ def aboutus(request):
 def recentsubmissions(request):
     return render(request, "recent_friends_submissions.html")
 
-def trendingProblems(request):
-    return render(request, "trending_problems.html")
-
-
 
 def leaderboard(request):
     createLeaderBoard()
