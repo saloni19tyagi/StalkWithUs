@@ -8,7 +8,8 @@ from django.contrib.auth import logout
 # Create your views here.
 import requests
 from django.views.generic import TemplateView
-# from chartjs.views.lines import BaseLineChartView
+from dashboard.leaderboard import createLeaderBoard
+
 
 from dashboard import models
 from login import models
@@ -43,10 +44,6 @@ def todolist(request):
     return render(request, "toDoList.html")
 
 
-def leaderboard(request):
-    return render(request, "leaderboard.html")
-
-
 def aboutus(request):
     return render(request, "aboutus.html")
 
@@ -59,39 +56,6 @@ def trendingProblems(request):
 
 
 
-# def refreshData(request):
-#     codechef_url = 'https://competitive-coding-api.herokuapp.com/api/codechef/%s' % request.session['codechef']
-#     response = requests.get(codechef_url)
-#     codechef = response.json();
-#     codeforcesurl = "https://codeforces.com/api/user.info?handles=" + request.session['codeforces']
-#     codeforces = requests.request("GET", codeforcesurl).json()
-#     li = codeforces['result']
-#     codeforcesrating = li[0]
-
-#     user = models.userdata.objects.get(email = request.session['email'])
-#     user.codeforcesRating = codeforcesrating['rating']
-#     user.codechefRating = codechef['rank']
-#     user.save()
-#     print(codeforcesrating['maxRating'])
-#     print(codechef['rank'])
-
-#     return render(request, "profile.html")
-
-
-# class LineChartJSONView(BaseLineChartView):
-#     def get_labels(self):
-#         """Return 7 labels for the x-axis."""
-#         return ["January", "February", "March", "April", "May", "June", "July"]
-
-#     def get_providers(self):
-#         """Return names of datasets."""
-#         return ["codeforces", "codechef", "hackerrank"]
-
-#     def get_data(self):
-#         """Return 3 datasets to plot."""
-
-#         return [codeforces[0], codechef[0], hackerrank[0]]
-
-
-# line_chart = TemplateView.as_view(template_name='line_chart.html')
-# line_chart_json = LineChartJSONView.as_view()
+def leaderboard(request):
+    createLeaderBoard()
+    return render(request, "leaderboard.html")
