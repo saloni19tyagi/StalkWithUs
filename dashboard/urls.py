@@ -31,5 +31,5 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='aboutus'),
     # path('chart/', line_chart, name='line_chart'),
     # path('chartJSON/', line_chart_json, name='line_chart_json'),
-    path('refreshData', views.refreshData, name='refreshData')
+    # path('refreshData', views.refreshData, name='refreshData')
 ]

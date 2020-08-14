@@ -58,23 +58,23 @@ def recentsubmissions(request):
     return render(request, "recent_friends_submissions.html")
 
 
-def refreshData(request):
-    codechef_url = 'https://competitive-coding-api.herokuapp.com/api/codechef/%s' % request.session['codechef']
-    response = requests.get(codechef_url)
-    codechef = response.json();
-    codeforcesurl = "https://codeforces.com/api/user.info?handles=" + request.session['codeforces']
-    codeforces = requests.request("GET", codeforcesurl).json()
-    li = codeforces['result']
-    codeforcesrating = li[0]
+# def refreshData(request):
+#     codechef_url = 'https://competitive-coding-api.herokuapp.com/api/codechef/%s' % request.session['codechef']
+#     response = requests.get(codechef_url)
+#     codechef = response.json()
+#     codeforcesurl = "https://codeforces.com/api/user.info?handles=" + request.session['codeforces']
+#     codeforces = requests.request("GET", codeforcesurl).json()
+#     li = codeforces['result']
+#     codeforcesrating = li[0]
 
-    user = models.userdata.objects.get(email = request.session['email'])
-    user.codeforcesRating = codeforcesrating['rating']
-    user.codechefRating = codechef['rank']
-    user.save()
-    print(codeforcesrating['maxRating'])
-    print(codechef['rank'])
+#     user = models.userdata.objects.get(email = request.session['email'])
+#     user.codeforcesRating = codeforcesrating['rating']
+#     user.codechefRating = codechef['rank']
+#     user.save()
+#     print(codeforcesrating['maxRating'])
+#     print(codechef['rank'])
 
-    return render(request, "profile.html")
+#     return render(request, "profile.html")
 
 
 # class LineChartJSONView(BaseLineChartView):
